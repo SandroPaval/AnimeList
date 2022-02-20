@@ -46,7 +46,7 @@ render() {
                                     <h2> Wertung: {favorit.wertung}</h2>
                                 </ul>
                             </p>
-                        ))}+
+                        ))}
                     </ul>
 
 
