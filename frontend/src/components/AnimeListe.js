@@ -4,7 +4,6 @@ import './AnimeListe.css'
 export default function AnimeListe (props){
     const {animeID, titel, img, genre, folgen, wertung} = props.anime;
     return (
-    <div className="homePage">
         <div>
 
         <ul>
@@ -19,7 +18,6 @@ export default function AnimeListe (props){
                 </p>
         </ul>
     </div>
-</div>
 
         );
 }
