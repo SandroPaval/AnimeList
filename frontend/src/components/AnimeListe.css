@@ -1,0 +1,70 @@
+
+.homePage {
+
+}
+
+body {
+    font-family: -apple-system;
+    background: darkslateblue;
+    color:black;
+}
+
+.animeListe {
+    border-radius: 25px;
+    background:blueviolet;
+    width: 1830px;
+    margin: 0px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 35px;
+    display: grid;
+    gap: 2rem;
+    padding: 17px;
+    margin-bottom: 35px;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.animeHeader{
+    font-style: revert;
+    border-radius: 25px;
+    background: blue;
+    display: inline-block;
+    font-size: 50px;
+    margin: 15px;
+    margin-left: 35px;
+    margin-bottom: -25px;
+    padding: 5px;
+}
+
+.animeCertain{
+    border-radius: 25px;
+    min-width:410px;
+    max-width:410px;
+    min-height:730px;
+    max-height:730px;
+    margin: 5px;
+    display: inline-grid;
+    row-gap: 10px;
+    background: skyblue;
+    padding: 10px;
+}
+
+.animeTitel{
+
+    min-height:30px;
+    max-height:30px;
+    font-size: 28px;
+}
+.animeBild{
+    min-height: 480px;
+    max-height: 480px;
+    min-width: 380px;
+    max-width: 380px;
+}
+.animeBeschreibung {
+    background: khaki;
+    font-size: 20px;
+    border-radius: 10px;
+    display: inline-grid;
+}
