@@ -1,77 +1,42 @@
-import React, { Component} from "react";
-import './App.css';
-import axios from 'axios'
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import AnimeListe from "./components/AnimeListe";
+import {Anime} from "./components/Anime";
+import './App.css'
 
-class App extends Component {
+export default function App() {
+    const [listenType, setListenType] = useState('Anime')
+    const [animes, setAnimes] = useState([])
+    const [listenName, setListenName] = useState('Komplette Liste')
 
-  constructor(props) {
-    super(props);
-    this.state= {
-      animes: [],
-      favoriten: [],
-    }
-  }
-
-  componentDidMount() {
-
-    axios.get('http://localhost:8080/Anime')
-    .then(res => {
-      const animes = res.data;
-      this.setState({animes});
-    })
-
-    axios.get('http://localhost:8080/Anime/Favorite')
-        .then(res => {
-            const favoriten = res.data;
-            this.setState({favoriten});
-        })
-  }
+    useEffect(() => {
+        fetch(`http://localhost:8080/${listenType}`)
+            .then(response => response.json())
+            .then(json => setAnimes(json))
+    }, [listenType])
 
 
-
-render() {
-
-          return(
-              <div className="homePage"> <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
-                <div className="favoritenListe">
-                    <h1 className="favoritenHeader">Favoriten: </h1>
-                    <ul>
-                        {this.state.favoriten.map(favorit => (
-                            <p  key={favorit.animeID} className="animeCertain">
-                                <h1 className="animeTitel"> Titel: {favorit.titel}</h1>
-                                <img className="animeBild" src={favorit.img} alt='' />
-                                <ul className="animeBeschreibung">
-                                    <h2> Genre: {favorit.genre}</h2>
-                                    <h2> Folgen: {favorit.folgen}</h2>
-                                    <h2> Wertung: {favorit.wertung}</h2>
-                                </ul>
-                            </p>
-                        ))}
-                    </ul>
+return (
+    <>
+    <div>
+        <button className="completeButton" onClick={() => {setListenType('Anime'); setListenName('Komplette Liste')}}>Komplette Liste</button>
+        <button className="favoriteButton" onClick={() => {setListenType('Anime/Favorite'); setListenName('Favoriten')}}>Favoriten Liste</button>
+        <button className="wertungsButton" onClick={() => {setListenType('Anime/Wertung'); setListenName('Top Liste')}}>Top Liste</button>
+    </div>
+        <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
+        <h2 className="animeHeader">{listenName}: </h2>
+       <p className="animeListe">
+           {animes.map(anime => {
+           return <AnimeListe anime={anime}></AnimeListe>
+        })}
+       </p>
 
 
-                </div>
-              <div className="animeListe">
-                    <h1 className="animeHeader">Animes: </h1>
-                  <ul>
-                      {this.state.animes.map(anime => (
-                          <p key={anime.animeID} className="animeCertain">
-                              <h1 className="animeTitel"> Titel: {anime.titel}</h1>
-                              <img className="animeBild" src={anime.img} alt='' />
-                              <ul className="animeBeschreibung">
-                              <h2> Genre: {anime.genre}</h2>
-                              <h2> Folgen: {anime.folgen}</h2>
-                              <h2> Wertung: {anime.wertung}</h2>
-                              </ul>
-                          </p>
-                          ))}
-                      </ul>
+    </>
 
 
-                  </div>
-              </div>
+)
 
-          );
+
+
 }
-}
- export default App;

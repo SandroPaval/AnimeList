@@ -49,6 +49,12 @@ public class AnimeJdbcDao implements DAO<Anime> {
     }
 
     @Override
+    public List<Anime> getAllAnimesByWertung(){
+        String sql= "Select titel, folgen, wertung, genre, animeID, img, favorit From animeliste ORDER BY wertung DESC";
+        return jdbcTemplate.query(sql, rowMapper);
+    }
+
+    @Override
     public void createAnime(Anime anime) {
         String sql = "INSERT INTO animeliste(titel, folgen, wertung, genre, animeID, img) VALUES(?,?,?,?,?,?)";
         int inserted = jdbcTemplate.update(sql,anime.getTitel(),anime.getFolgen(),anime.getWertung(),anime.getGenre(),anime.getAnimeID(), anime.getImg());

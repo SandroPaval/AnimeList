@@ -10,6 +10,8 @@ public interface DAO<T> {
 
     List<T> getAllAnimeByFavorit();
 
+    List<T> getAllAnimesByWertung();
+
     void createAnime(T t);
 
     Optional<T> getAnimeById(int id);

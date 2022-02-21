@@ -27,6 +27,9 @@ public class AnimeController {
         return dao.getAnimeById(id);
     }
 
+   @GetMapping("/Anime/Wertung")
+   public List<Anime> getAnimeByWertung(){return dao.getAllAnimesByWertung();}
+
     @PostMapping("/Anime")
     public void saveAnime(@RequestBody Anime anime){
         dao.createAnime(anime);
@@ -36,6 +39,7 @@ public class AnimeController {
         public void updateAnime(@RequestBody Anime anime, @PathVariable int id){
         dao.updateAnimeById(anime,id);
     }
+
     @PutMapping("/Anime/{id}/Favorite")
     public void updateAnimeByFavorite(@PathVariable int id){
         dao.updateFavoriteOfAnime(id);
