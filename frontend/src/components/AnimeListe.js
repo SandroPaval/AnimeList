@@ -11,9 +11,9 @@ export default function AnimeListe (props){
                     <h1 className="animeTitel"> Titel: {titel}</h1>
                     <img className="animeBild" src={img} alt='' />
                     <ul className="animeBeschreibung">
-                        <h2> Genre: {genre}</h2>
-                        <h2> Folgen: {folgen}</h2>
-                        <h2> Wertung: {wertung}</h2>
+                        <h2 className="descFont"> Genre: {genre}</h2>
+                        <h2 className="descFont"> Folgen: {folgen}</h2>
+                        <h2 className="descFont"> Wertung: {wertung}</h2>
                     </ul>
                 </p>
         </ul>
