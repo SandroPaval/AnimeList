@@ -21,12 +21,12 @@ export default function App() {
 return (
     <>
     <div className="pageHeader">
+        <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
         <ul className="buttonGroup">
         <button className="typeButton" onClick={() => {setListenType('Anime'); setListenName('Komplette Liste')}}>Komplette Liste</button>
         <button className="typeButton" onClick={() => {setListenType('Anime/Favorite'); setListenName('Favoriten')}}>Favoriten Liste</button>
         <button className="typeButton" onClick={() => {setListenType('Anime/Wertung'); setListenName('Top Liste')}}>Top Liste</button>
         </ul>
-        <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
 
     </div>
        <p className="animeListe">
