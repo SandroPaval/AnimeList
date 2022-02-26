@@ -9,6 +9,7 @@ public class Anime {
     private int animeID;
     private String img;
     private Boolean favorit;
+
     public Anime() {
     }
 

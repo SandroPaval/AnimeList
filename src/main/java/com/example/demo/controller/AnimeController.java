@@ -27,7 +27,7 @@ public class AnimeController {
         return dao.getAnimeById(id);
     }
 
-   @GetMapping("/Anime/Wertung")
+    @GetMapping("/Anime/Wertung")
    public List<Anime> getAnimeByWertung(){return dao.getAllAnimesByWertung();}
 
     @PostMapping("/Anime")

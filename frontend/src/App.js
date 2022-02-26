@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import AnimeListe from "./components/AnimeListe";
 import {Anime} from "./components/Anime";
 import './App.css'
@@ -8,12 +7,17 @@ export default function App() {
     const [listenType, setListenType] = useState('Anime')
     const [animes, setAnimes] = useState([])
     const [listenName, setListenName] = useState('Komplette Liste')
+    const [animeId, setAnimeId] = useState('')
+    const [storedFavorite, setStoredFavorite] = useState(false)
+    const [buttonClicked, setButtonClicked] = useState(false)
 
     useEffect(() => {
         fetch(`http://localhost:8080/${listenType}`)
             .then(response => response.json())
             .then(json => setAnimes(json))
     }, [listenType])
+
+
 
 
 return (
@@ -27,7 +31,8 @@ return (
         <h2 className="animeHeader">{listenName}: </h2>
        <p className="animeListe">
            {animes.map(anime => {
-           return <AnimeListe anime={anime}></AnimeListe>
+           return<AnimeListe anime={anime}></AnimeListe>
+
         })}
        </p>
 
