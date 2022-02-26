@@ -14,33 +14,23 @@
     padding: 17px;
     margin-bottom: 35px;
     grid-template-columns: repeat(4,1fr);
-
+   
 }
 
-.animeHeader{
-    font-style: revert;
-    border-radius: 25px;
-    background: rgb(9, 9, 148);
-    display: inline-block;
-    font-size: 50px;
-    margin: 15px;
-    margin-left: 35px;
-    margin-bottom: -25px;
-    padding: 5px;
-}
 
 .animeCertain{
     border-radius: 25px;
     min-width:410px;
     max-width:410px;
-    min-height:730px;
-    max-height:730px;
+    min-height:668px;
+    max-height:668px;
     margin: 5px;
     display: inline-grid;
     row-gap: 10px;
     background: rgb(0, 0, 0);
     padding: 10px;
     box-shadow: 0px 0px 10px 5px rgb(9, 9, 148);
+    
 }
 
 .animeTitel{
@@ -50,23 +40,32 @@
     min-height:30px;
     max-height:30px;
     font-size: 28px;
+    text-align: center;
 }
 .animeBild{
     min-height: 480px;
     max-height: 480px;
     min-width: 380px;
     max-width: 380px;
-    margin-left: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 .animeBeschreibung {
-    background: khaki;
+    background: rgb(18, 14, 73);
     font-size: 20px;
     width: 380px;
-    margin-left: 5px;
-    margin-bottom: 5px;
     border-radius: 10px;
     display: inline-grid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: white;
+    text-align: left;
+    text-shadow: 3px 3px 3px  black;
 }
 
 .descFont {

@@ -8,7 +8,7 @@ export default function AnimeListe (props){
 
         <ul>
                 <p key={animeID} className="animeCertain">
-                    <h1 className="animeTitel"> Titel: {titel}</h1>
+                    <h1 className="animeTitel"> {titel}</h1>
                     <img className="animeBild" src={img} alt='' />
                     <ul className="animeBeschreibung">
                         <h2 className="descFont"> Genre: {genre}</h2>

@@ -29,7 +29,6 @@ return (
         <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
 
     </div>
-        <h2 className="animeHeader">{listenName}: </h2>
        <p className="animeListe">
            {animes.map(anime => {
                return<AnimeListe anime={anime}></AnimeListe>
