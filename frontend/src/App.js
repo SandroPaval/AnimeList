@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from "react";
 import AnimeListe from "./components/AnimeListe";
-import {Anime} from "./components/Anime";
 import './App.css'
 
 export default function App() {
     const [listenType, setListenType] = useState('Anime')
     const [animes, setAnimes] = useState([])
-    const [listenName, setListenName] = useState('Komplette Liste')
    
 
     useEffect(() => {
@@ -23,9 +21,13 @@ return (
     <div className="pageHeader">
         <h1 className="homePageHeader">Der Mac Gillis Fanclub</h1>
         <ul className="buttonGroup">
-        <button className="typeButton" onClick={() => {setListenType('Anime'); setListenName('Komplette Liste')}}>Komplette Liste</button>
-        <button className="typeButton" onClick={() => {setListenType('Anime/Favorite'); setListenName('Favoriten')}}>Favoriten Liste</button>
-        <button className="typeButton" onClick={() => {setListenType('Anime/Wertung'); setListenName('Top Liste')}}>Top Liste</button>
+        <form className="searchBar">
+            <button type="submit" className="typeButton">Anime Suchen</button>
+            <input type="text" className="inputField" placeholder="Titel eingeben..." ></input>
+        </form> 
+        <button className="typeButton" onClick={() => {setListenType('Anime')}}>Komplette Liste</button>
+        <button className="typeButton" onClick={() => {setListenType('Anime/Favorite')}}>Favoriten Liste</button>
+        <button className="typeButton" onClick={() => {setListenType('Anime/Wertung')}}>Top Liste</button>
         </ul>
 
     </div>
