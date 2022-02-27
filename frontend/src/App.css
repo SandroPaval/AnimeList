@@ -1,7 +1,7 @@
  *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box
+   
 }
 
 body{
@@ -23,7 +23,7 @@ body{
     color: white;
     text-shadow: 2px 2px 4px #000000;
     text-align: left;
-    margin-bottom: 
+
     
     
 }
@@ -46,17 +46,19 @@ body{
      height: 50px;
      width: 150px;
      font-size: 20px;
-     border-color: white;
+     border-color: rgb(9, 9, 148);
      margin-left: 6.5px;
      margin-right: 6.5px;
      cursor: pointer;
      transition-duration: inherit;
+    border-radius: 5px;
      
      
  }
 
  .typeButton:focus{
-     background: black;
+     background: rgb(9, 9, 148);
+     border-color: white;
  }
 
 
