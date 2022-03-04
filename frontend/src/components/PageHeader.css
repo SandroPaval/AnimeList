@@ -1,0 +1,79 @@
+.pageHeader{
+    background: rgb(8, 8, 134);
+    width: auto;
+    height:75px;
+
+}
+
+
+.homePageLink{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.homePageHeader{
+    font-size: 70px;
+    margin-left: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: left;
+
+    
+    
+}
+
+
+
+
+.buttonGroup{
+    text-align: right;
+    margin-top: -67px;
+    margin-right: 8px;
+    
+}
+
+.searchBar{
+    float: right;
+    margin-right: 8px;
+}
+
+.inputField {
+    height: 35px;
+    font-size: 30px;
+    color: rgb(9, 9, 148);
+    border-color: white;
+    border-radius: 5px;
+}
+
+
+ 
+
+ .typeButton{
+     background: rgb(9, 9, 148);
+     color: white;
+     height: 50px;
+     width: 150px;
+     font-size: 20px;
+     border-color: rgb(9, 9, 148);
+     margin-right: 13px;
+     cursor: pointer;
+     transition-duration: inherit;
+    border-radius: 5px;
+    border-width: 3px;
+
+     
+ }
+
+ .typeButton:hover{
+     background: rgb(9, 9, 148);
+     border-color: white;
+ }
+
+ .typeButton:focus {
+     color: rgb(9, 9, 148);
+     background: white;
+     border-color: white;
+     border-width: 5px;
+ }
